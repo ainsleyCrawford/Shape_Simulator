@@ -55,7 +55,7 @@ The base class includes two virtual properties, `protected int x` and `protected
 
 Manifestly, this architecture follows the OCP as the `Shape` class doesn't have to be modified to add additional primitives. Moreover, the abstract `Print()` method signature forces all subclasses to override it. An alternative solution may have been to have one `Print()` method that took advantage of an if-else/switch statement to output the required format for the given widget. This, however, would have been in violation of the OCP. The chosen solution offers superior robustness to changing requirements and extensibility.
 
-Returning to the LSP, the decision was made to not have circle inherit from ellipse, nor square from rectangle, because the derived classes would not have all the properties of their progenitors. On the other hand, ...
+Returning to the LSP, the decision was made to not have circle inherit from ellipse, nor square from rectangle, because the derived classes would not have all the properties of their progenitors. On the other hand, `Textbox` inherits  from `Rectangle`. Although this could be considered an infringement of the DIP, it is in line with the LSP and the ISP, and avoids tthe duplication of common properties.
 
 ## Bibliography
 - Grace Hopper Academy, 2016, *S.O.L.I.D. Principles of Object-Oriented Design - A Tutorial on Object-Oriented Design*, YouTube, viewed 18 February 2020, https://www.youtube.com/watch?v=GtZtQ2VFweA
