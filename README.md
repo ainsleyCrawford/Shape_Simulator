@@ -22,7 +22,7 @@ To develop a console application that simulates a vector-based drawing package. 
 Naturally, the textbox must have the functionality of displaying text within its bounding rectangle.
 ## The Principles of Object-Oriented Design
 Before writing any code, it is apposite to review best practice in code design. The acronym SOLID is a set of principles that guide developers to thoroughly exploit the advantages of object-oriented programming. This section is based on the sources in the [bibliography](#bibliography).  
-*NB*: All quotes are taken from the work of Robert Martin (2000, 2006).
+<sub><sup>NB: All quotes are taken from the work of Robert Martin (2000, 2006).</sup></sub>
 ### SOLID
 
 #### Single Responsibility Principle
@@ -50,6 +50,7 @@ Dependency Inversion Pattern:
 <p align="center">Policy Layer → Interface ← Mechanism Layer → Interface ← Utility Layer</p>
 
 ## Design Rationale
+My design choices were principally guided by SOLID principles, but also by the Agile principle of simplicity. The foundation of the architecture is the abstract class `Shape`, that serves as a base class for all widgets.
 
 ## Bibliography
 - Grace Hopper Academy, 2016, *S.O.L.I.D. Principles of Object-Oriented Design - A Tutorial on Object-Oriented Design*, YouTube, viewed 18 February 2020, https://www.youtube.com/watch?v=GtZtQ2VFweA
