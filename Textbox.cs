@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace Shape_Simulator
 {
-    class Textbox : Shape
+    class Textbox : Rectangle
     {
-        int width;
-        int height;
         string text;
         public Textbox(int x, int y, int width, int height, string text)
-            : base(x, y)
+            : base(x, y, width, height)
         {
-            this.width = width;
-            this.height = height;
             this.text = text;
         }
         public override void Print()

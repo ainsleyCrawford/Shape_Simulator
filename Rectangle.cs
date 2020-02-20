@@ -8,8 +8,8 @@ namespace Shape_Simulator
 {
     public class Rectangle : Shape
     {
-        int width;
-        int height;
+        protected int width;
+        protected int height;
         public Rectangle(int x, int y, int width, int height)
             : base(x, y)
         {
