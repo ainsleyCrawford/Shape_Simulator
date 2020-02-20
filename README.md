@@ -21,7 +21,8 @@ To develop a console application that simulates a vector-based drawing package. 
 
 Naturally, the textbox must have the functionality of displaying text within its bounding rectangle.
 ## The Principles of Object-Oriented Design
-Before writing any code, it is apposite to review best practice in code design. The acronym SOLID is a set of principles that guide developers to thoroughly exploit the advantages of object-oriented programming. This section is based on the sources in the [bibliography](#bibliography). <sub><sup>NB: All quotes are taken from the work of Robert Martin (2000, 2006).</sup></sub>
+Before writing any code, it is apposite to review best practice in code design. The acronym SOLID is a set of principles that guide developers to thoroughly exploit the advantages of object-oriented programming. This section is based on the sources in the [bibliography](#bibliography).  
+<sub><sup>NB: All quotes are taken from the work of Robert Martin (2000, 2006).</sup></sub>
 ### SOLID
 
 #### Single Responsibility Principle
