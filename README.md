@@ -21,8 +21,7 @@ To develop a console application that simulates a vector-based drawing package. 
 
 Naturally, the textbox must have the functionality of displaying text within its bounding rectangle.
 ## The Principles of Object-Oriented Design
-Before writing any code, it is apposite to review best practice in code design. The acronym SOLID is a set of principles that guide developers to thoroughly exploit the advantages of object-oriented programming. This section is based on the sources in the [bibliography](#bibliography).  
-<sub><sup>NB: All quotes are taken from the work of Robert Martin (2000, 2006).</sup></sub>
+Before writing any code, it is apposite to review best practice in code design. The acronym SOLID is a set of principles that guide developers to thoroughly exploit the advantages of object-oriented programming. This section is based on the sources in the [bibliography](#bibliography). <sub><sup>NB: All quotes are taken from the work of Robert Martin (2000, 2006).</sup></sub>
 ### SOLID
 
 #### Single Responsibility Principle
@@ -36,7 +35,7 @@ Put another way, an entity should be designed in such a way that it can be exten
 #### Liskov Substitution Principle
 > Subclasses should be substitutable for their base classes.
 
-A derived class should contain all the functionality of its base class, so a user of the latter will continue to function normally if the former is passed to it. An illustrative example of the violation of this principle is letting circle be a derivative of ellipse: circles have a single property—radius—while ellipses requier three—two foci and the length of the major axis. Attempting to navigate this design flaw via a verfication step (an if–else or switch statement), would introduce an open–closed principle violation.
+A derived class should contain all the functionality of its base class, so a user of the latter will continue to function normally if the former is passed to it. An illustrative example of the violation of this principle is letting circle be a derivative of ellipse: circles have a single property—radius—while ellipses requier three—two foci and the length of the major axis. Attempting to navigate this design flaw via a verfication step (an if–else or switch statement), would introduce an open–closed principle (OCP) violation.
 #### Interface Segregation Principle
 > Many client specific interfaces are better than one general purpose interface.
 
@@ -50,7 +49,11 @@ Dependency Inversion Pattern:
 <p align="center">Policy Layer → Interface ← Mechanism Layer → Interface ← Utility Layer</p>
 
 ## Design Rationale
-My design choices were principally guided by SOLID principles, but also by the Agile principle of simplicity. The foundation of the architecture is the abstract class `Shape`, that serves as a base class for all widgets.
+My design choices were principally guided by SOLID principles, but also by the Agile principle of simplicity. The foundation of the architecture is the abstract class `Shape`, which is able to serve as a base class for all widgets because the primitives share certain features and may, thus, be grouped together. Relying on an abstract super class respects the dependency inversion principle (DIP).
+
+The base class includes two virtual properties, `protected int x` and `protected int y`, an abstract method, `public abstract void Print()`, and a constructor. Firstly, The `protected` keyword is attributed to the variables because they are only called by derived classes. Secondly, declaring the coordinates as virtual properties reduces the need for duplication as all primitives require a location to be 'drawn' on the page. This repects the Liskov substitution principle (LSP) as all widgets have all the features of the `Shape` class. Furthermore, the widgets contain no extraneous features as prescribed by the integration seperation principle (ISP).
+
+Manifestly, this architecture follows the OCP as the `Shape` class doesn't have to be modified to add additional primitives.
 
 ## Bibliography
 - Grace Hopper Academy, 2016, *S.O.L.I.D. Principles of Object-Oriented Design - A Tutorial on Object-Oriented Design*, YouTube, viewed 18 February 2020, https://www.youtube.com/watch?v=GtZtQ2VFweA
