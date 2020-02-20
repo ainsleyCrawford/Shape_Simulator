@@ -1,0 +1,6 @@
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\obj\Debug\Shape_Simulator.csprojAssemblyReference.cache
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\bin\Debug\Shape_Simulator.exe.config
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\bin\Debug\Shape_Simulator.exe
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\bin\Debug\Shape_Simulator.pdb
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\obj\Debug\Shape_Simulator.exe
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\obj\Debug\Shape_Simulator.pdb
