@@ -53,7 +53,9 @@ My design choices were principally guided by SOLID principles, but also by the A
 
 The base class includes two virtual properties, `protected int x` and `protected int y`, an abstract method, `public abstract void Print()`, and a constructor. Firstly, The `protected` keyword is attributed to the variables because they are only called by derived classes. Secondly, declaring the coordinates as virtual properties reduces the need for duplication as all primitives require a location to be 'drawn' on the page. This repects the Liskov substitution principle (LSP) as all widgets have all the features of the `Shape` class. Furthermore, the widgets contain no extraneous features as prescribed by the integration seperation principle (ISP).
 
-Manifestly, this architecture follows the OCP as the `Shape` class doesn't have to be modified to add additional primitives.
+Manifestly, this architecture follows the OCP as the `Shape` class doesn't have to be modified to add additional primitives. Moreover, the abstract `Print()` method signature forces all subclasses to override it. An alternative solution may have been to have one `Print()` method that took advantage of an if-else/switch statement to output the required format for the given widget. This, however, would have been in violation of the OCP. The chosen solution offers superior robustness to changing requirements and extensibility.
+
+Returning to the LSP, the decision was made to not have circle inherit from ellipse, nor square from rectangle, because the derived classes would not have all the properties of their progenitors. On the other hand, ...
 
 ## Bibliography
 - Grace Hopper Academy, 2016, *S.O.L.I.D. Principles of Object-Oriented Design - A Tutorial on Object-Oriented Design*, YouTube, viewed 18 February 2020, https://www.youtube.com/watch?v=GtZtQ2VFweA
