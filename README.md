@@ -1,5 +1,5 @@
 # Shape Simulator
-This console application simulates the addition of the following widgets to a page: rectangle, square, ellipse, circle and textbox.
+This console application simulates the addition of the following widgets to a page: rectangle, square, ellipse, circle and textbox. This project responds to its specification by exploring and implementing SOLID design principles.
 ## Table of Contents
 - [The Challenge](#the-challenge)
 - [The Principles of Object-Oriented Design](#the-principles-of-object-oriented-design)
