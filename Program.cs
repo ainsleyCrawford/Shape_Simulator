@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Shape_Simulator
 {
@@ -58,6 +55,7 @@ namespace Shape_Simulator
                 "Press any other key to output your drawing.");
             if (Console.ReadKey(true).Key == ConsoleKey.Spacebar) Draw();
         }
+        #region Shapes
         static void _Rectangle()
         {
             int x, y, width, height;
@@ -220,5 +218,6 @@ namespace Shape_Simulator
             text = Console.ReadLine();
             shapes.Add(new Textbox(x, y, width, height, text));
         }
+        #endregion
     }
 }
