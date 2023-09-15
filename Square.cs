@@ -12,7 +12,7 @@ namespace Shape_Simulator
         }
         public override void Print()
         {
-            Console.WriteLine("Square ({0},{1}) size={2}", x, y, size);
+            Console.WriteLine($"Square\t({x},{y})\tsize={size}");
         }
     }
 }

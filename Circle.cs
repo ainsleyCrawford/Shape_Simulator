@@ -12,7 +12,7 @@ namespace Shape_Simulator
         }
         public override void Print()
         {
-            Console.WriteLine("Circle ({0},{1}) size={2}", x, y, size);
+            Console.WriteLine($"Circle ({x},{y}) size={size}");
         }
     }
 }

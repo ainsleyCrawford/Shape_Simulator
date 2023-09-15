@@ -12,7 +12,7 @@ namespace Shape_Simulator
         }
         public override void Print()
         {
-            Console.WriteLine("Textbox ({0},{1}) width={2} height={3} Text=\"{4}\"", x, y, width, height, text);
+            Console.WriteLine($"Textbox\t({x},{y})\twidth={width}\theight={height}\tText=\"{text}\"");
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Shape_Simulator
         }
         public override void Print()
         {
-            Console.WriteLine("Ellipse ({0},{1}) diameterH={2} diameterV={3}", x, y, horizontalDiameter, verticalDiameter);
+            Console.WriteLine($"Ellipse\t({x},{y})\tdiameterH={horizontalDiameter}\tdiameterV={verticalDiameter}");
         }
     }
 }

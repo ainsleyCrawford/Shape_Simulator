@@ -60,14 +60,14 @@ namespace Shape_Simulator
         {
             int x, y, width, height;
             Console.Write("Enter an x coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out x)) ;
+            if (Int32.TryParse(Console.ReadLine(), out x));
             else
             {
                 Console.WriteLine(invalid);
                 Draw();
             }
             Console.Write("Enter a y coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out y)) ;
+            if (Int32.TryParse(Console.ReadLine(), out y));
             else
             {
                 Console.WriteLine(invalid);
@@ -75,7 +75,7 @@ namespace Shape_Simulator
 
             }
             Console.Write("Enter a width: ");
-            if (Int32.TryParse(Console.ReadLine(), out width)) ;
+            if (Int32.TryParse(Console.ReadLine(), out width));
             else
             {
                 Console.WriteLine(invalid);
@@ -83,7 +83,7 @@ namespace Shape_Simulator
 
             }
             Console.Write("Enter a height: ");
-            if (Int32.TryParse(Console.ReadLine(), out height)) ;
+            if (Int32.TryParse(Console.ReadLine(), out height));
             else
             {
                 Console.WriteLine(invalid);
@@ -95,14 +95,14 @@ namespace Shape_Simulator
         {
             int x, y, size;
             Console.Write("Enter an x coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out x)) ;
+            if (Int32.TryParse(Console.ReadLine(), out x));
             else
             {
                 Console.WriteLine(invalid);
                 Draw();
             }
             Console.Write("Enter a y coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out y)) ;
+            if (Int32.TryParse(Console.ReadLine(), out y));
             else
             {
                 Console.WriteLine(invalid);
@@ -110,7 +110,7 @@ namespace Shape_Simulator
 
             }
             Console.Write("Enter a size: ");
-            if (Int32.TryParse(Console.ReadLine(), out size)) ;
+            if (Int32.TryParse(Console.ReadLine(), out size));
             else
             {
                 Console.WriteLine(invalid);
@@ -122,14 +122,14 @@ namespace Shape_Simulator
         {
             int x, y, diameterH, diameterV;
             Console.Write("Enter an x coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out x)) ;
+            if (Int32.TryParse(Console.ReadLine(), out x));
             else
             {
                 Console.WriteLine(invalid);
                 Draw();
             }
             Console.Write("Enter a y coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out y)) ;
+            if (Int32.TryParse(Console.ReadLine(), out y));
             else
             {
                 Console.WriteLine(invalid);
@@ -137,7 +137,7 @@ namespace Shape_Simulator
 
             }
             Console.Write("Enter a horizontal diameter: ");
-            if (Int32.TryParse(Console.ReadLine(), out diameterH)) ;
+            if (Int32.TryParse(Console.ReadLine(), out diameterH));
             else
             {
                 Console.WriteLine(invalid);
@@ -145,7 +145,7 @@ namespace Shape_Simulator
 
             }
             Console.Write("Enter a vertical diameter: ");
-            if (Int32.TryParse(Console.ReadLine(), out diameterV)) ;
+            if (Int32.TryParse(Console.ReadLine(), out diameterV));
             else
             {
                 Console.WriteLine(invalid);
@@ -157,22 +157,21 @@ namespace Shape_Simulator
         {
             int x, y, size;
             Console.Write("Enter an x coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out x)) ;
+            if (Int32.TryParse(Console.ReadLine(), out x));
             else
             {
                 Console.WriteLine(invalid);
                 Draw();
             }
             Console.Write("Enter a y coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out y)) ;
+            if (Int32.TryParse(Console.ReadLine(), out y));
             else
             {
                 Console.WriteLine(invalid);
                 Draw();
-
             }
             Console.Write("Enter a size: ");
-            if (Int32.TryParse(Console.ReadLine(), out size)) ;
+            if (Int32.TryParse(Console.ReadLine(), out size));
             else
             {
                 Console.WriteLine(invalid);
@@ -185,14 +184,14 @@ namespace Shape_Simulator
             int x, y, width, height;
             string text;
             Console.Write("Enter an x coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out x)) ;
+            if (Int32.TryParse(Console.ReadLine(), out x));
             else
             {
                 Console.WriteLine(invalid);
                 Draw();
             }
             Console.Write("Enter a y coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out y)) ;
+            if (Int32.TryParse(Console.ReadLine(), out y));
             else
             {
                 Console.WriteLine(invalid);
@@ -200,7 +199,7 @@ namespace Shape_Simulator
 
             }
             Console.Write("Enter a width: ");
-            if (Int32.TryParse(Console.ReadLine(), out width)) ;
+            if (Int32.TryParse(Console.ReadLine(), out width));
             else
             {
                 Console.WriteLine(invalid);
@@ -208,7 +207,7 @@ namespace Shape_Simulator
 
             }
             Console.Write("Enter a height: ");
-            if (Int32.TryParse(Console.ReadLine(), out height)) ;
+            if (Int32.TryParse(Console.ReadLine(), out height));
             else
             {
                 Console.WriteLine(invalid);

@@ -14,7 +14,7 @@ namespace Shape_Simulator
         }
         public override void Print()
         {
-            Console.WriteLine("Rectangle ({0}, {1}) width={2} height={3}", x, y, width, height);
+            Console.WriteLine($"Rectangle\t({x},{y})\twidth={width}\theight={3}");
         }
     }
 }
