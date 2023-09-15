@@ -2,17 +2,21 @@
 
 namespace Shape_Simulator
 {
-    class Textbox : Rectangle
+    class Textbox: Rectangle
     {
-        string text;
-        public Textbox(int x, int y, int width, int height, string text)
-            : base(x, y, width, height)
+        private string text;
+        private string Text
         {
-            this.text = text;
+            get => text;
+            set => text = value;
+        }
+        public Textbox(int x, int y, int width, int height, string text): base(x, y, width, height)
+        {
+            Text = text;
         }
         public override void Print()
         {
-            Console.WriteLine($"Textbox\t({x},{y})\twidth={width}\theight={height}\tText=\"{text}\"");
+            Console.WriteLine($"Textbox\t\t({X},{Y})\twidth={Width}\t\theight={Height}\tText=\"{text}\"");
         }
     }
 }

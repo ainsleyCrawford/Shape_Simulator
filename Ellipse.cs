@@ -2,20 +2,28 @@
 
 namespace Shape_Simulator
 {
-    public class Ellipse : Shape
+    public class Ellipse: Shape
     {
-        int horizontalDiameter = 300;
-        int verticalDiameter = 200;
-
-        public Ellipse(int x, int y, int horizontalDiamater, int verticalDiameter)
-            : base(x, y)
+        private int horizontalDiameter;
+        private int verticalDiameter;
+        private int HorizontalDiameter
         {
-            this.horizontalDiameter = horizontalDiameter;
-            this.verticalDiameter = verticalDiameter;
+            get => horizontalDiameter;
+            set => horizontalDiameter = value;
+        }
+        private int VerticalDiameter
+        {
+            get => verticalDiameter;
+            set => verticalDiameter = value;
+        }
+        public Ellipse(int x, int y, int horizontalDiamater, int verticalDiameter): base(x, y)
+        {
+            HorizontalDiameter = horizontalDiameter;
+            VerticalDiameter = verticalDiameter;
         }
         public override void Print()
         {
-            Console.WriteLine($"Ellipse\t({x},{y})\tdiameterH={horizontalDiameter}\tdiameterV={verticalDiameter}");
+            Console.WriteLine($"Ellipse\t\t({X},{Y})\tdiameterH={horizontalDiameter}\tdiameterV={verticalDiameter}");
         }
     }
 }

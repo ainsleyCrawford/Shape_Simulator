@@ -2,17 +2,21 @@
 
 namespace Shape_Simulator
 {
-    public class Square : Shape
+    public class Square: Shape
     {
-        int size;
-        public Square(int x, int y, int size)
-            : base(x, y)
+        private int size;
+        private int Size
         {
-            this.size = size;
+            get => size;
+            set => size = value;
+        }
+        public Square(int x, int y, int size): base(x, y)
+        {
+            Size = size;
         }
         public override void Print()
         {
-            Console.WriteLine($"Square\t({x},{y})\tsize={size}");
+            Console.WriteLine($"Square\t\t({X},{Y})\tsize={size}");
         }
     }
 }
