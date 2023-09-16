@@ -21,9 +21,6 @@ namespace Shape_Simulator
             HorizontalDiameter = horizontalDiameter;
             VerticalDiameter = verticalDiameter;
         }
-        public override void Print()
-        {
-            Console.WriteLine($"Ellipse\t\t({X},{Y})\tdiameterH={horizontalDiameter}\tdiameterV={verticalDiameter}");
-        }
+        public override void Print() => Console.WriteLine($"Ellipse\t\t({X},{Y})\tdiameterH={horizontalDiameter}\tdiameterV={verticalDiameter}");
     }
 }

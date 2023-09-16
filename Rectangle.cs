@@ -16,15 +16,11 @@ namespace Shape_Simulator
             get => height;
             set => height = value;
         }
-        public Rectangle(int x, int y, int width, int height)
-            : base(x, y)
+        public Rectangle(int x, int y, int width, int height): base(x, y)
         {
             Width = width;
             Height = height;
         }
-        public override void Print()
-        {
-            Console.WriteLine($"Rectangle\t({X},{Y})\twidth={width}\t\theight={height}");
-        }
+        public override void Print() => Console.WriteLine($"Rectangle\t({X},{Y})\twidth={width}\t\theight={height}");
     }
 }

@@ -10,13 +10,7 @@ namespace Shape_Simulator
             get => size;
             set => size = value;
         }
-        public Circle(int x, int y, int size): base(x, y)
-        {
-            Size = size;
-        }
-        public override void Print()
-        {
-            Console.WriteLine($"Circle\t\t({X},{Y})\tsize={size}");
-        }
+        public Circle(int x, int y, int size): base(x, y) => Size = size;
+        public override void Print() => Console.WriteLine($"Circle\t\t({X},{Y})\tsize={size}");
     }
 }

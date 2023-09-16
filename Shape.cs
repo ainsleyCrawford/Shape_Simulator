@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Shape_Simulator
+﻿namespace Shape_Simulator
 {
     public abstract class Shape
     {

@@ -17,18 +17,16 @@ namespace Shape_Simulator
             Console.WriteLine(horizontalLine);
             Console.WriteLine("Requested Drawing");
             Console.WriteLine(horizontalLine);
-            foreach(Shape shape in shapes)
-            {
-                shape.Print();
-            }
+            
+            foreach(Shape shape in shapes) shape.Print();
+            
             Console.WriteLine(horizontalLine);
 
             Console.ReadKey();
         }
         static void Draw()
         {
-            Console.WriteLine("Which shape would you like to draw? \n" +
-                "r = Rectangle, s = Square, e = Ellipse, c = circle, t = textbox");
+            Console.WriteLine("Which shape would you like to draw?\nr = Rectangle, s = Square, e = Ellipse, c = circle, t = textbox");
             switch (Console.ReadKey(true).Key) 
             {
                 case ConsoleKey.R:
@@ -51,8 +49,7 @@ namespace Shape_Simulator
                     Draw();
                     break;
             }
-            Console.WriteLine("Key the spacebar to add another shape to your drawing.\n" +
-                "Press any other key to output your drawing.");
+            Console.WriteLine("Key the spacebar to add another shape to your drawing.\nPress any other key to output your drawing.");
             if (Console.ReadKey(true).Key == ConsoleKey.Spacebar) Draw();
         }
         #region Shapes
@@ -134,7 +131,6 @@ namespace Shape_Simulator
             {
                 Console.WriteLine(invalid);
                 Draw();
-
             }
             Console.Write("Enter a horizontal diameter: ");
             if (Int32.TryParse(Console.ReadLine(), out diameterH));
@@ -142,7 +138,6 @@ namespace Shape_Simulator
             {
                 Console.WriteLine(invalid);
                 Draw();
-
             }
             Console.Write("Enter a vertical diameter: ");
             if (Int32.TryParse(Console.ReadLine(), out diameterV));
@@ -196,7 +191,6 @@ namespace Shape_Simulator
             {
                 Console.WriteLine(invalid);
                 Draw();
-
             }
             Console.Write("Enter a width: ");
             if (Int32.TryParse(Console.ReadLine(), out width));
@@ -204,7 +198,6 @@ namespace Shape_Simulator
             {
                 Console.WriteLine(invalid);
                 Draw();
-
             }
             Console.Write("Enter a height: ");
             if (Int32.TryParse(Console.ReadLine(), out height));
