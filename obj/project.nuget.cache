@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "0oS+c6hsakal+v0ub5KR/zjSnUB5mhXaMWhnXviDRfXOmMgQ+P1UValJl7DsIOzPOvrerQCGeD7rD0WGeTe1pw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ainsl\\Desktop\\Portfolio\\Shape_Simulator\\Shape_Simulator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ainsl\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\ainsl\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

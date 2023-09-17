@@ -1,0 +1,13 @@
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\obj\Debug\net6.0\Shape_Simulator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\obj\Debug\net6.0\Shape_Simulator.csproj.CoreCompileInputs.cache
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\bin\Debug\net6.0\Shape_Simulator.exe
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\bin\Debug\net6.0\Shape_Simulator.dll.config
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\bin\Debug\net6.0\Shape_Simulator.deps.json
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\bin\Debug\net6.0\Shape_Simulator.runtimeconfig.json
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\bin\Debug\net6.0\Shape_Simulator.dll
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\bin\Debug\net6.0\Shape_Simulator.pdb
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\obj\Debug\net6.0\Shape_Simulator.dll
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\obj\Debug\net6.0\refint\Shape_Simulator.dll
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\obj\Debug\net6.0\Shape_Simulator.pdb
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\obj\Debug\net6.0\Shape_Simulator.genruntimeconfig.cache
+C:\Users\ainsl\Desktop\Portfolio\Shape_Simulator\obj\Debug\net6.0\ref\Shape_Simulator.dll
