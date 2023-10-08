@@ -6,7 +6,7 @@ namespace Shape_Simulator
     class Program
     {
         static List<Shape> shapes = new List<Shape>();
-        static string invalid = "Does not compute";
+        static string invalid = "Does not compute.\n";
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome, user!");
@@ -46,11 +46,9 @@ namespace Shape_Simulator
                     break;
                 default:
                     Console.WriteLine(invalid);
-                    Draw();
+                    FinishOrContinue();
                     break;
             }
-            Console.WriteLine("Key the spacebar to add another shape to your drawing.\nPress any other key to output your drawing.");
-            if (Console.ReadKey(true).Key == ConsoleKey.Spacebar) Draw();
         }
         #region Shapes
         static void _Rectangle()
@@ -87,6 +85,7 @@ namespace Shape_Simulator
                 Draw();
             }
             shapes.Add(new Rectangle(x, y, width, height));
+            FinishOrContinue();
         }
         static void _Square()
         {
@@ -114,6 +113,7 @@ namespace Shape_Simulator
                 Draw();
             }
             shapes.Add(new Square(x, y, size));
+            FinishOrContinue();
         }
         static void _Ellipse()
         {
@@ -147,6 +147,7 @@ namespace Shape_Simulator
                 Draw();
             }
             shapes.Add(new Ellipse(x, y, diameterH, diameterV));
+            FinishOrContinue();
         }
         static void _Circle()
         {
@@ -173,6 +174,7 @@ namespace Shape_Simulator
                 Draw();
             }
             shapes.Add(new Circle(x, y, size));
+            FinishOrContinue();
         }
         static void _Textbox()
         {
@@ -209,7 +211,13 @@ namespace Shape_Simulator
             Console.Write("Type a message to display: ");
             text = Console.ReadLine();
             shapes.Add(new Textbox(x, y, width, height, text));
+            FinishOrContinue();
         }
         #endregion
+        static void FinishOrContinue()
+        {
+            Console.WriteLine("Key the spacebar to add another shape to your drawing.\nPress any other key to output your drawing.");
+            if (Console.ReadKey(true).Key == ConsoleKey.Spacebar) Draw();
+        }
     }
 }
