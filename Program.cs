@@ -6,7 +6,6 @@ namespace Shape_Simulator
     class Program
     {
         static List<Shape> shapes = new List<Shape>();
-        static string invalid = "Does not compute.\n";
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome, user!");
@@ -54,37 +53,27 @@ namespace Shape_Simulator
         {
             int x, y, width, height;
             Console.Write("Enter an x coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out x));
-            else
+            if (Int32.TryParse(Console.ReadLine(), out x))
             {
-                Console.WriteLine(invalid);
-                Draw();
+                Console.Write("Enter a y coordinate: ");
+                if (Int32.TryParse(Console.ReadLine(), out y))
+                {
+                    Console.Write("Enter a width: ");
+                    if (Int32.TryParse(Console.ReadLine(), out width))
+                    {
+                        Console.Write("Enter a height: ");
+                        if (Int32.TryParse(Console.ReadLine(), out height))
+                        {
+                            shapes.Add(new Rectangle(x, y, width, height));
+                            FinishOrContinue();
+                        }
+                        else InvalidInput();
+                    }
+                    else InvalidInput();
+                }
+                else InvalidInput();
             }
-            Console.Write("Enter a y coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out y));
-            else
-            {
-                Console.WriteLine(invalid);
-                Draw();
-
-            }
-            Console.Write("Enter a width: ");
-            if (Int32.TryParse(Console.ReadLine(), out width));
-            else
-            {
-                Console.WriteLine(invalid);
-                Draw();
-
-            }
-            Console.Write("Enter a height: ");
-            if (Int32.TryParse(Console.ReadLine(), out height));
-            else
-            {
-                Console.WriteLine(invalid);
-                Draw();
-            }
-            shapes.Add(new Rectangle(x, y, width, height));
-            FinishOrContinue();
+            else InvalidInput();
         }
         static void _Square()
         {
@@ -111,103 +100,82 @@ namespace Shape_Simulator
         {
             int x, y, diameterH, diameterV;
             Console.Write("Enter an x coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out x));
-            else
+            if (Int32.TryParse(Console.ReadLine(), out x))
             {
-                Console.WriteLine(invalid);
-                Draw();
+                Console.Write("Enter a y coordinate: ");
+                if (Int32.TryParse(Console.ReadLine(), out y))
+                {
+                    Console.Write("Enter a horizontal diameter: ");
+                    if (Int32.TryParse(Console.ReadLine(), out diameterH))
+                    {
+                        Console.Write("Enter a vertical diameter: ");
+                        if (Int32.TryParse(Console.ReadLine(), out diameterV))
+                        {
+                            shapes.Add(new Ellipse(x, y, diameterH, diameterV));
+                            FinishOrContinue();
+                        }
+                        else InvalidInput();
+                    }
+                    else InvalidInput();
+                }
+                else InvalidInput();
             }
-            Console.Write("Enter a y coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out y));
-            else
-            {
-                Console.WriteLine(invalid);
-                Draw();
-            }
-            Console.Write("Enter a horizontal diameter: ");
-            if (Int32.TryParse(Console.ReadLine(), out diameterH));
-            else
-            {
-                Console.WriteLine(invalid);
-                Draw();
-            }
-            Console.Write("Enter a vertical diameter: ");
-            if (Int32.TryParse(Console.ReadLine(), out diameterV));
-            else
-            {
-                Console.WriteLine(invalid);
-                Draw();
-            }
-            shapes.Add(new Ellipse(x, y, diameterH, diameterV));
-            FinishOrContinue();
+            else InvalidInput();
         }
         static void _Circle()
         {
             int x, y, size;
             Console.Write("Enter an x coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out x));
-            else
+            if (Int32.TryParse(Console.ReadLine(), out x))
             {
-                Console.WriteLine(invalid);
-                Draw();
+                Console.Write("Enter a y coordinate: ");
+                if (Int32.TryParse(Console.ReadLine(), out y))
+                {
+                    Console.Write("Enter a size: ");
+                    if (Int32.TryParse(Console.ReadLine(), out size))
+                    {
+                        shapes.Add(new Circle(x, y, size));
+                        FinishOrContinue();
+                    }
+                    else InvalidInput();
+                }
+                else InvalidInput();
             }
-            Console.Write("Enter a y coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out y));
-            else
-            {
-                Console.WriteLine(invalid);
-                Draw();
-            }
-            Console.Write("Enter a size: ");
-            if (Int32.TryParse(Console.ReadLine(), out size));
-            else
-            {
-                Console.WriteLine(invalid);
-                Draw();
-            }
-            shapes.Add(new Circle(x, y, size));
-            FinishOrContinue();
+            else InvalidInput();
         }
         static void _Textbox()
         {
             int x, y, width, height;
             string text;
             Console.Write("Enter an x coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out x));
-            else
+            if (Int32.TryParse(Console.ReadLine(), out x))
             {
-                Console.WriteLine(invalid);
-                Draw();
+                Console.Write("Enter a y coordinate: ");
+                if (Int32.TryParse(Console.ReadLine(), out y))
+                {
+                    Console.Write("Enter a width: ");
+                    if (Int32.TryParse(Console.ReadLine(), out width))
+                    {
+                        Console.Write("Enter a height: ");
+                        if (Int32.TryParse(Console.ReadLine(), out height))
+                        {
+                            Console.Write("Type a message to display: ");
+                            text = Console.ReadLine();
+                            shapes.Add(new Textbox(x, y, width, height, text));
+                            FinishOrContinue();
+                        }
+                        else InvalidInput();
+                    }
+                    else InvalidInput();
+                }
+                else InvalidInput();
             }
-            Console.Write("Enter a y coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out y));
-            else
-            {
-                Console.WriteLine(invalid);
-                Draw();
-            }
-            Console.Write("Enter a width: ");
-            if (Int32.TryParse(Console.ReadLine(), out width));
-            else
-            {
-                Console.WriteLine(invalid);
-                Draw();
-            }
-            Console.Write("Enter a height: ");
-            if (Int32.TryParse(Console.ReadLine(), out height));
-            else
-            {
-                Console.WriteLine(invalid);
-                Draw();
-            }
-            Console.Write("Type a message to display: ");
-            text = Console.ReadLine();
-            shapes.Add(new Textbox(x, y, width, height, text));
-            FinishOrContinue();
+            else InvalidInput();
         }
         #endregion
         static void InvalidInput()
         {
+            string invalid = "Does not compute.\n";
             Console.WriteLine(invalid);
             FinishOrContinue();
         }
