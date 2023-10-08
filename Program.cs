@@ -45,8 +45,7 @@ namespace Shape_Simulator
                     _Textbox();
                     break;
                 default:
-                    Console.WriteLine(invalid);
-                    FinishOrContinue();
+                    InvalidInput();
                     break;
             }
         }
@@ -91,29 +90,22 @@ namespace Shape_Simulator
         {
             int x, y, size;
             Console.Write("Enter an x coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out x));
-            else
+            if (Int32.TryParse(Console.ReadLine(), out x))
             {
-                Console.WriteLine(invalid);
-                Draw();
+                Console.Write("Enter a y coordinate: ");
+                if (Int32.TryParse(Console.ReadLine(), out y))
+                {
+                    Console.Write("Enter a size: ");
+                    if (Int32.TryParse(Console.ReadLine(), out size))
+                    {
+                        shapes.Add(new Square(x, y, size));
+                        FinishOrContinue();
+                    }
+                    else InvalidInput();
+                }
+                else InvalidInput();
             }
-            Console.Write("Enter a y coordinate: ");
-            if (Int32.TryParse(Console.ReadLine(), out y));
-            else
-            {
-                Console.WriteLine(invalid);
-                Draw();
-
-            }
-            Console.Write("Enter a size: ");
-            if (Int32.TryParse(Console.ReadLine(), out size));
-            else
-            {
-                Console.WriteLine(invalid);
-                Draw();
-            }
-            shapes.Add(new Square(x, y, size));
-            FinishOrContinue();
+            else InvalidInput();
         }
         static void _Ellipse()
         {
@@ -214,6 +206,11 @@ namespace Shape_Simulator
             FinishOrContinue();
         }
         #endregion
+        static void InvalidInput()
+        {
+            Console.WriteLine(invalid);
+            FinishOrContinue();
+        }
         static void FinishOrContinue()
         {
             Console.WriteLine("Key the spacebar to add another shape to your drawing.\nPress any other key to output your drawing.");
