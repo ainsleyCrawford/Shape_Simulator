@@ -25,7 +25,7 @@ namespace Shape_Simulator
         }
         static void Draw()
         {
-            Console.WriteLine("Which shape would you like to draw?\nr = Rectangle, s = Square, e = Ellipse, c = circle, t = textbox");
+            Console.WriteLine("Which shape would you like to draw?\nr = Rectangle, s = Square, e = Ellipse, c = circle, t = textbox\n");
             switch (Console.ReadKey(true).Key) 
             {
                 case ConsoleKey.R:
@@ -175,12 +175,14 @@ namespace Shape_Simulator
         #endregion
         static void InvalidInput()
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Does not compute.\n");
+            Console.ResetColor();
             FinishOrContinue();
         }
         static void FinishOrContinue()
         {
-            Console.WriteLine("Key the spacebar to add another shape to your drawing.\nPress any other key to output your drawing.");
+            Console.WriteLine("\nKey the spacebar to add another shape to your drawing.\nPress any other key to output your drawing.");
             if (Console.ReadKey(true).Key == ConsoleKey.Spacebar) Draw();
         }
     }
