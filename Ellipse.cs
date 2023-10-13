@@ -16,7 +16,7 @@ namespace Shape_Simulator
             get => verticalDiameter;
             set => verticalDiameter = value;
         }
-        public Ellipse(int x, int y, int horizontalDiamater, int verticalDiameter): base(x, y)
+        public Ellipse(int x, int y, int horizontalDiameter, int verticalDiameter): base(x, y)
         {
             HorizontalDiameter = horizontalDiameter;
             VerticalDiameter = verticalDiameter;

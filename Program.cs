@@ -175,8 +175,7 @@ namespace Shape_Simulator
         #endregion
         static void InvalidInput()
         {
-            string invalid = "Does not compute.\n";
-            Console.WriteLine(invalid);
+            Console.WriteLine("Does not compute.\n");
             FinishOrContinue();
         }
         static void FinishOrContinue()
